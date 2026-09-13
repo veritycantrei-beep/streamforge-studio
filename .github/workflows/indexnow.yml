@@ -9,12 +9,15 @@ on:
       - 'sitemap.xml'
       - 'robots.txt'
       - '9f3a1c7d5e2b4a6c8d0f123456789abc.txt'
+      - '.github/workflows/indexnow.yml'
   workflow_dispatch:
 
 jobs:
   submit:
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for static deploy
+        run: sleep 20
       - name: Notify IndexNow
         run: |
           KEY='9f3a1c7d5e2b4a6c8d0f123456789abc'
