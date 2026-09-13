@@ -19,6 +19,9 @@ jobs:
       - name: Patch portfolio
         run: python scripts/patch_niche.py
 
+      - name: Sync sales offer
+        run: python scripts/patch_sales.py
+
       - name: Commit update
         run: |
           git config user.name "StreamForge Bot"
@@ -27,6 +30,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Add business podcast true-crime and tech portfolio concepts"
+            git commit -m "Sync paid trial and multi-niche sales copy"
             git push
           fi
