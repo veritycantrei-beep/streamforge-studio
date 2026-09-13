@@ -16,12 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Patch portfolio
-        run: python scripts/patch_niche.py
-
-      - name: Sync sales offer
-        run: python scripts/patch_sales.py
-
       - name: Add free audit funnel
         run: python scripts/patch_audit.py
 
