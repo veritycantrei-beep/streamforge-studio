@@ -22,6 +22,9 @@ jobs:
       - name: Sync sales offer
         run: python scripts/patch_sales.py
 
+      - name: Add free audit funnel
+        run: python scripts/patch_audit.py
+
       - name: Commit update
         run: |
           git config user.name "StreamForge Bot"
@@ -30,6 +33,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Sync paid trial and multi-niche sales copy"
+            git commit -m "Add free thumbnail audit funnel"
             git push
           fi
