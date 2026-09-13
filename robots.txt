@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://streamforge-studio.onrender.com/sitemap.xml
